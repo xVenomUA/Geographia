@@ -1,14 +1,17 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./DetailsCountry.module.css";
 
 import { NotFound } from "../NotFound/NotFound";
 
 import { selectCountryById } from "../../redux/Films/selector";
+import { useNavigate } from "react-router-dom";
+import { deleteCountry } from "../../redux/Films/operation";
 
 export const DetailsCountry = () => {
   const data = useSelector(selectCountryById);
-
+const Navigate = useNavigate(); 
+const dispatch = useDispatch ();  
   const {
     AdministrativeUnits,
     Area,
@@ -28,6 +31,10 @@ export const DetailsCountry = () => {
 
   if (!data) {
     return <NotFound />;
+  }
+  const onClickDelete =  () =>{ 
+     dispatch(deleteCountry(data.id));  
+      Navigate("/"); 
   }
 
   return (
@@ -106,6 +113,8 @@ export const DetailsCountry = () => {
           <img src={image} alt="Flag of Canada" className={styles.flag} />
         </div>
       </div>
+
+      <button type="button" onClick={onClickDelete} className={styles.btn}>Delete</button>
     </>
   );
 };

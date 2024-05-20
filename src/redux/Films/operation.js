@@ -39,3 +39,15 @@ export const addCountry = createAsyncThunk(
     }
   }
 );
+
+export const deleteCountry = createAsyncThunk( 
+  "country/deleteCountry",
+  async (id, thunkAPI) => {
+    try {
+      await axios.delete(`${BASE_URL}country/${id}`);
+      return id;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+); 
