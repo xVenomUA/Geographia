@@ -1,0 +1,55 @@
+
+.header{ 
+    background-color: rgb(45, 35, 35);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.nav{
+     display: flex;
+     gap: 100px;
+     padding: 0 75px;
+}
+.link{ 
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    background-color: rgb(241, 158, 43);
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+    &:hover{
+        background-color: rgb(255, 77, 23);
+    }
+}
+.active{
+    background-color: rgb(255, 77, 23);
+}   
+
+/* TABLER BREAKPOINTS */
+
+@media screen and (max-width: 1279.43px) {
+    .nav{
+        gap: 50px;
+        padding: 0;
+
+    }
+    .link{ 
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+    
+  }
+  /* Phone BREAKPOINTS */
+  
+  @media screen and (max-width: 767.234px) {
+    .nav{ 
+        gap: 19px;
+       padding: 5px 0;
+    }
+    .link{ 
+        font-size: 14px;
+        padding: 10px 6px;
+        font-size: 14px;
+    }
+    
+  }

@@ -1,0 +1,40 @@
+.list{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px; 
+    padding: 50px 0 ;
+}
+.li{
+     height: 470px;
+}
+.main{ 
+    height: 100vh;
+}
+.text{ 
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 1279.43px) {
+    .list{ 
+        gap: 40px;
+    }
+    .li{
+        height: 430px;
+    }
+   
+}
+/* Phone BREAKPOINTS */
+
+@media screen and (max-width: 767.234px) { 
+    .list{ 
+        gap: 30px;
+    }
+    .li{
+        height: 400px;
+    }
+}
