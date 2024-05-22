@@ -18,7 +18,7 @@ export const SearchBar = () => {
   return (
     <div className={css.search}>
       <label htmlFor={id} className={css.label}>
-        Find country by title
+        Find country by name
       </label>
       <input
         type="text"

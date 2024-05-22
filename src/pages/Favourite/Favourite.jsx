@@ -29,7 +29,7 @@ const Favourite = () => {
               );
             })
           ) : (
-            <h1 className={css.text}>No favorite movies</h1>
+            <h1 className={css.text}>No favorite country</h1>
           )}
         </ul>
       </div>
